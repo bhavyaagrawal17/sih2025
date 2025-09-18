@@ -7,12 +7,12 @@ import Dashboard from './pages/Dashboard.jsx'
 import Login from './pages/login.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
-<<<<<<< HEAD
-import Login from './pages/Login.jsx'
+
+import Login from './pages/login.jsx'
 import Signup from './pages/Signup.jsx'
-=======
+
 import YouthRegistration from './pages/YouthRegistration.jsx'
->>>>>>> 7c5a4f3 (Updated)
+
 
 function App() {
 	return (
