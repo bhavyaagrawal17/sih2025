@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import logo from '../assets/logo.jpg'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
@@ -10,9 +11,9 @@ function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-primary"></div>
-            <span className="font-bold text-lg text-navy-900">PM Internship</span>
-          </Link>
+  <img src={logo} alt="PM Internship Logo" className="h-8 w-8 rounded-lg object-cover" />
+  <span className="font-bold text-lg text-navy-900">PM Internship</span>
+</Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6">
@@ -21,7 +22,7 @@ function Navbar() {
             <NavLink to="/about" className={({ isActive }) => `text-sm font-medium ${isActive ? 'text-primary' : 'text-gray-700 hover:text-gray-900'}`}>About</NavLink>
             <NavLink to="/contact" className={({ isActive }) => `text-sm font-medium ${isActive ? 'text-primary' : 'text-gray-700 hover:text-gray-900'}`}>Contact</NavLink>
             <Link to="/login" className="btn-outline">Login</Link>
-            <Link to="/signup" className="btn-primary">Signup</Link>
+            <Link to="/youth-registration" className="btn-primary">Register</Link>
           </nav>
 
           {/* Mobile Menu Button */}

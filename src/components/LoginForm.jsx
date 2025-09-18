@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 export function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -100,12 +102,12 @@ export function LoginForm() {
         </div>
 
         {/* Login Button */}
-        <button
-          type="submit"
-          className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded transition-colors duration-200"
-        >
-          <a href="/YouthRegistration">Login</a>
-        </button>
+        <Link
+  to="/dashboard"
+  className="w-full block text-center bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded"
+>
+  Login
+</Link>
       </form>
 
       {/* Links */}
@@ -121,13 +123,10 @@ export function LoginForm() {
         <div className="pt-4 border-t border-gray-200">
           <p className="text-sm text-gray-600">
             New User?{" "}
-            <button
-              type="button"
-              className="text-orange-600 hover:text-orange-700 font-medium"
-              onClick={() => console.log("Register clicked")}
-            >
-              Register Here
-            </button>
+            <Link to="/youth-registration" className="bg-gradient-to-r  text-orange">
+                Register here
+              </Link>
+
           </p>
         </div>
       </div>

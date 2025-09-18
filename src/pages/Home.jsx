@@ -7,6 +7,7 @@ import {
   GraduationCap, CreditCard, Monitor, MapPin, Code, DollarSign, BookOpen, Trees, Heart,
   Users, Target, Eye
 } from 'lucide-react';
+import HeroImage from '../assets/bg.jpg'
 
 function StatCard({label, value}) {
   return (
@@ -77,37 +78,68 @@ function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-orange-50"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-orange-500/5"></div>
+  {/* Background Gradients */}
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-orange-50"></div>
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-orange-500/5"></div>
 
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-blue-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-green-400/15 rounded-full blur-2xl animate-pulse delay-500"></div>
-        </div>
+  {/* Animated Blobs */}
+  <div className="absolute inset-0">
+    <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
+    <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-blue-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-green-400/15 rounded-full blur-2xl animate-pulse delay-500"></div>
+  </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div initial={{opacity:0, y:30}} animate={{opacity:1, y:0}} transition={{duration:0.8}} className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-navy-900 mb-6 leading-tight">
-              Empowering India's Youth for
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600 block">
-                Tomorrow's Opportunities
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
-              A government-backed initiative offering industry internships and real-world exposure to build your future.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/youth-registration" className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg px-8 py-4 rounded-2xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                Get Started →
-              </Link>
-              <a href="#opportunities" className="bg-navy-900 text-white font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-navy-800 transition-all duration-300 transform hover:scale-105 shadow-xl">
-                Explore Opportunities
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+  {/* Content */}
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col lg:flex-row items-center justify-between gap-8">
+    {/* Text */}
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }} 
+      animate={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.8 }} 
+      className="max-w-2xl text-center lg:text-left"
+    >
+      <h1 className="text-5xl md:text-7xl font-bold text-navy-900 mb-6 leading-tight">
+        Empowering India's Youth for
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600 block">
+          Tomorrow's Opportunities
+        </span>
+      </h1>
+      <p className="text-xl md:text-2xl text-gray-700 mb-10 leading-relaxed">
+        A government-backed initiative offering industry internships and real-world exposure to build your future.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <Link 
+          to="/youth-registration" 
+          className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg px-8 py-4 rounded-2xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+        >
+          Get Started →
+        </Link>
+        <a 
+          href="#opportunities" 
+          className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg px-8 py-4 rounded-2xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+        >
+          Explore Opportunities
+        </a>
+      </div>
+    </motion.div>
+
+    {/* Hero Image */}
+    <motion.div 
+  initial={{ opacity: 0, x: 50 }} 
+  animate={{ opacity: 1, x: 0 }} 
+  transition={{ duration: 0.8, delay: 0.3 }} 
+  className="w-full max-w-lg"
+>
+  <img 
+    src={HeroImage} 
+    alt="Internship hero" 
+    className="rounded-3xl shadow-2xl object-cover w-full"
+  />
+</motion.div>
+
+  </div>
+</section>
+
 
       {/* Stats */}
       <section className="container-px mx-auto py-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
