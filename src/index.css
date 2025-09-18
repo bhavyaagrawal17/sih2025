@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App base styles */
+html, body, #root {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+/* Utility components */
+.container-px {
+	@apply px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+	@apply bg-white rounded-xl shadow-soft border border-gray-100;
+}
+
+.btn-primary {
+	@apply inline-flex items-center justify-center rounded-lg bg-primary text-white px-4 py-2 font-semibold transition-colors hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60;
+}
+
+.btn-outline {
+	@apply inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 font-semibold text-gray-700 hover:bg-gray-50;
+}
+
+.section-title {
+	@apply text-2xl sm:text-3xl font-bold tracking-tight text-gray-900;
+}
+
+.muted {
+	@apply text-gray-600;
+}
