@@ -111,4 +111,8 @@ function ProfileEditor({ profile, onProfileChange, onAddSkill, onRemoveSkill, on
 	)
 }
 
+<<<<<<< HEAD
 export default ProfileEditor
+=======
+export default ProfileEditor
+>>>>>>> 7c5a4f3 (Updated)

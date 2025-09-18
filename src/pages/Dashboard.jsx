@@ -82,6 +82,7 @@ function Dashboard(){
 	},[profile])
 
 	return (
+<<<<<<< HEAD
 		<div className="container-px mx-auto py-8">
 			<div className="card p-6 bg-gradient-to-r from-blue-50 to-emerald-50">
 				<p className="text-2xl font-semibold">Hi {profile.name || 'Student'} 👋</p>
@@ -89,6 +90,12 @@ function Dashboard(){
 				<div className="mt-4">
 					<button className="btn-primary" onClick={()=>setIsEditing(v=>!v)}>{isEditing ? 'Close Editor' : 'Edit Profile'}</button>
 				</div>
+=======
+		<div className="container-px mx-auto py-8 bg-gray-50 min-h-screen">
+			<div className="card p-6 bg-gradient-to-r from-orange-50 to-yellow-50">
+				<p className="text-2xl font-bold text-navy-900">Hi Student 👋</p>
+				<p className="mt-1 text-gray-700">Here are your recommended internships.</p>
+>>>>>>> 7c5a4f3 (Updated)
 			</div>
 
 			<div className="mt-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
@@ -134,7 +141,7 @@ function Dashboard(){
 
 					<div className="flex items-center justify-between">
 						<h2 className="section-title">AI Recommendations</h2>
-						<select value={filter} onChange={e=>setFilter(e.target.value)} className="rounded-lg border border-gray-300 px-3 py-2">
+						<select value={filter} onChange={e=>setFilter(e.target.value)} className="rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500">
 							{['All','Remote','Delhi','Bengaluru'].map(x=> <option key={x}>{x}</option>)}
 						</select>
 					</div>
@@ -142,7 +149,7 @@ function Dashboard(){
 						{filtered.map(item => (
 							<div key={item.id} className="card p-5 flex flex-col gap-3">
 								<div className="flex items-center gap-3">
-									<div className="h-10 w-10 rounded-lg bg-gray-200" />
+								<div className="h-10 w-10 rounded-lg bg-gradient-to-br from-orange-400 to-orange-600" />
 									<div>
 										<p className="font-semibold">{item.title}</p>
 										<p className="text-sm text-gray-600">{item.company}</p>
@@ -153,7 +160,7 @@ function Dashboard(){
 									<span>{item.duration}</span>
 									<span>{item.stipend}</span>
 								</div>
-								<button className="btn-primary mt-auto">Apply</button>
+								<button className="mt-auto inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 font-semibold hover:from-orange-600 hover:to-orange-700 transition">Apply</button>
 							</div>
 						))}
 					</div>
@@ -174,15 +181,15 @@ function Dashboard(){
 					<div className="card p-5">
 						<p className="font-semibold">Quick Stats</p>
 						<div className="mt-3 grid grid-cols-3 gap-3 text-center">
-							<div className="p-3 rounded-lg bg-gray-50">
+							<div className="p-3 rounded-lg bg-orange-50">
 								<p className="text-xl font-bold">7</p>
 								<p className="text-sm text-gray-600">Applications</p>
 							</div>
-							<div className="p-3 rounded-lg bg-gray-50">
+							<div className="p-3 rounded-lg bg-orange-50">
 								<p className="text-xl font-bold">3</p>
 								<p className="text-sm text-gray-600">Shortlists</p>
 							</div>
-							<div className="p-3 rounded-lg bg-gray-50">
+							<div className="p-3 rounded-lg bg-orange-50">
 								<p className="text-xl font-bold">12</p>
 								<p className="text-sm text-gray-600">Matches</p>
 							</div>
@@ -192,7 +199,7 @@ function Dashboard(){
 						<p className="font-semibold">Trending Internships</p>
 						<div className="mt-3 grid grid-cols-2 gap-3">
 							{['UI/UX Designer','ML Engineer','Product Manager','QA Tester'].map(x=> (
-								<div key={x} className="rounded-lg border border-gray-200 p-3 text-sm">{x}</div>
+								<div key={x} className="rounded-lg border border-orange-200 bg-orange-50 p-3 text-sm">{x}</div>
 							))}
 						</div>
 					</div>
