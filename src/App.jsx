@@ -4,7 +4,7 @@ import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import Explore from './pages/Explore.jsx'
 import Dashboard from './pages/Dashboard.jsx'
-import Login from './pages/login.jsx'
+
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 
