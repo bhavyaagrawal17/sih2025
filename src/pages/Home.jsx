@@ -68,16 +68,17 @@ function Home() {
 					</div>
 					<motion.div initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} transition={{duration:0.6}} className="relative h-64 sm:h-80 md:h-full">
 						<div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/20 to-emerald-300/20" />
-						<div className="absolute inset-6 rounded-2xl bg-white shadow-soft" />
+						<div className="absolute inset-6 rounded-2xl bg-white shadow-soft">
+						</div>
 					</motion.div>
 				</div>
 			</section>
 
 			{/* Stats */}
 			<section className="container-px mx-auto py-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
-				<StatCard label="Internships Listed" value={<Counter to={2450} />} />
-				<StatCard label="Students Matched" value={<Counter to={8100} />} />
-				<StatCard label="Companies Onboarded" value={<Counter to={320} />} />
+				<StatCard label="Internships Listed" value={<Counter to={10000} />} />
+				<StatCard label="Students Matched" value={<Counter to={100000} />} />
+				<StatCard label="Companies Onboarded" value={<Counter to={3200} />} />
 			</section>
 
 			{/* Categories */}
@@ -88,19 +89,6 @@ function Home() {
 						<div key={name} className="card p-4 text-center hover:shadow-md transition">
 							<p className="font-medium">{name}</p>
 						</div>
-					))}
-				</div>
-			</section>
-
-			{/* Featured */}
-			<section id="featured" className="container-px mx-auto py-12">
-				<div className="flex items-center justify-between">
-					<h2 className="section-title">Featured Opportunities</h2>
-					<a href="/explore" className="text-primary font-medium">See all</a>
-				</div>
-				<div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-					{Array.from({length:6}).map((_,i)=> (
-						<OpportunityCard key={i} title="Frontend Developer Intern" company="TechCorp" stipend="₹10k" duration="3 months" />
 					))}
 				</div>
 			</section>
@@ -119,6 +107,75 @@ function Home() {
 							<p className="font-semibold">{c.title}</p>
 							<p className="mt-2 text-gray-600">{c.desc}</p>
 						</div>
+					))}
+				</div>
+			</section>
+
+			{/* Eligibility */}
+			<section className="container-px mx-auto py-12">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+					<div className="card p-6">
+						<h3 className="section-title">Are you Eligible?</h3>
+						<ul className="mt-4 space-y-3 text-gray-700">
+							<li className="flex items-start gap-3">
+								<span className="mt-1 h-2 w-2 rounded-full bg-primary"></span>
+								<div>
+									<p className="font-medium">Age</p>
+									<p className="text-sm text-gray-600">21-24 Years</p>
+								</div>
+							</li>
+							<li className="flex items-start gap-3">
+								<span className="mt-1 h-2 w-2 rounded-full bg-primary"></span>
+								<div>
+									<p className="font-medium">Job Status</p>
+									<p className="text-sm text-gray-600">Not Employed Full Time</p>
+								</div>
+							</li>
+							<li className="flex items-start gap-3">
+								<span className="mt-1 h-2 w-2 rounded-full bg-primary"></span>
+								<div>
+									<p className="font-medium">Education</p>
+									<p className="text-sm text-gray-600">Not Enrolled Full Time</p>
+								</div>
+							</li>
+							<li className="flex items-start gap-3">
+								<span className="mt-1 h-2 w-2 rounded-full bg-primary"></span>
+								<div>
+									<p className="font-medium">Family (Self/ Spouse / Parents)</p>
+									<p className="text-sm text-gray-600">No one is Earning more than ₹8 Lakhs PA</p>
+								</div>
+							</li>
+							<li className="flex items-start gap-3">
+								<span className="mt-1 h-2 w-2 rounded-full bg-primary"></span>
+								<div>
+									<p className="font-medium">Government Employment</p>
+									<p className="text-sm text-gray-600">No Member has a Govt. Job</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div className="card p-6">
+						<h3 className="section-title">Core Benefits for PM Internship Scheme</h3>
+						<ul className="mt-4 space-y-3 text-gray-700 list-disc pl-6">
+							<li>12 months real-life experience in India's top companies</li>
+							<li>Monthly assistance of ₹4500 by Government of India and ₹500 by Industry</li>
+							<li>One-time Grant of ₹6000 for incidentals</li>
+							<li>Select from Various Sectors and from top Companies of India</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			{/* Featured */}
+			<section id="featured" className="container-px mx-auto py-12">
+				<div className="flex items-center justify-between">
+					<h2 className="section-title">Featured Opportunities</h2>
+					<a href="/explore" className="text-primary font-medium">See all</a>
+				</div>
+				<div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					{Array.from({length:6}).map((_,i)=> (
+						<OpportunityCard key={i} title="Frontend Developer Intern" company="TechCorp" stipend="₹10k" duration="3 months" />
 					))}
 				</div>
 			</section>

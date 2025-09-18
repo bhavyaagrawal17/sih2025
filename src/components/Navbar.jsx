@@ -21,8 +21,8 @@ function Navbar() {
 					</nav>
 
 					<div className="hidden md:flex items-center gap-3">
-						<Link to="/dashboard" className="btn-outline">Login</Link>
-						<Link to="/dashboard" className="btn-primary">Signup</Link>
+						<Link to="/login" className="btn-outline">Login</Link>
+						<Link to="/signup" className="btn-primary">Signup</Link>
 					</div>
 
 					<button aria-label="Open Menu" className="md:hidden p-2 rounded-lg border border-gray-200" onClick={()=>setOpen(v=>!v)}>
@@ -41,8 +41,8 @@ function Navbar() {
 						<NavLink onClick={()=>setOpen(false)} to="/about" className="block text-gray-700">About</NavLink>
 						<NavLink onClick={()=>setOpen(false)} to="/contact" className="block text-gray-700">Contact</NavLink>
 						<div className="flex gap-3 pt-2">
-							<Link to="/dashboard" className="btn-outline flex-1" onClick={()=>setOpen(false)}>Login</Link>
-							<Link to="/dashboard" className="btn-primary flex-1" onClick={()=>setOpen(false)}>Signup</Link>
+							<Link to="/login" className="btn-outline flex-1" onClick={()=>setOpen(false)}>Login</Link>
+							<Link to="/signup" className="btn-primary flex-1" onClick={()=>setOpen(false)}>Signup</Link>
 						</div>
 					</div>
 				</div>
